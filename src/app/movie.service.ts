@@ -5,13 +5,18 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class MovieService {
 
+  search_url: string = 'https://api.themoviedb.org/3/search/movie';
+
   api: string = '?api_key=51734426cecd2440b4f4ce9658af672f';
-  base_url: string = 'https://api.themoviedb.org/3/movie/';
+
+  options1: string = '&language=en-US';
+
+  query: string;
 
   constructor(private http: HttpClient) { }
-
-  getMovie() {
-      return this.http.get(this.base_url + 550 +  this.api);
+  
+  searchMovie() {
+    return this.http.get(this.search_url + this.api + '&query=' + this.query)
   }
 
 }

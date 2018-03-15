@@ -8,16 +8,16 @@ import { AppComponent } from './app.component';
 import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
-import { MovieComponent } from './movie/movie.component';
 import { MovieService } from './movie.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         AboutComponent,
         HomeComponent,
-        MovieComponent
+        MovieSearchComponent
     ],
     imports: [
         BrowserAnimationsModule,
