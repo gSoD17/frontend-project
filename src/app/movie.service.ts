@@ -11,12 +11,10 @@ export class MovieService {
 
   options1: string = '&language=en-US';
 
-  query: string;
-
   constructor(private http: HttpClient) { }
   
-  searchMovie() {
-    return this.http.get(this.search_url + this.api + '&query=' + this.query)
+  searchMovie(query: string) {
+    return this.http.get(this.search_url + this.api + '&query=' + query)
   }
 
 }

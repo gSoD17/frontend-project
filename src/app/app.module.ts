@@ -11,13 +11,16 @@ import { AboutComponent } from "./about/about.component";
 import { MovieService } from './movie.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { LoginComponent } from './login/login.component';
+import { UserService } from './user.service';
 
 @NgModule({
     declarations: [
         AppComponent,
         AboutComponent,
         HomeComponent,
-        MovieSearchComponent
+        MovieSearchComponent,
+        LoginComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -28,7 +31,7 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
         ROUTING,
         HttpClientModule
     ],
-    providers: [MovieService],
+    providers: [MovieService, UserService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

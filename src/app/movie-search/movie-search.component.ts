@@ -10,13 +10,17 @@ export class MovieSearchComponent implements OnInit {
 
   constructor(private _searchMovies: MovieService) { }
 
+  movies: any
+  reesults: object
+
   ngOnInit() {
   }
   
-  newSearch() {
-    this._searchMovies.searchMovie()
-      .subscribe( data => {
-        console.log(data)
+  newSearch(movie) {
+    this._searchMovies.searchMovie(movie)
+      .subscribe( movieData => {
+        this.movies = movieData['results']
+        console.log(movieData)
       })
   }
 
