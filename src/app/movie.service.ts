@@ -6,9 +6,7 @@ import { Observable } from 'rxjs/Observable';
 export class MovieService {
 
   search_url: string = 'https://api.themoviedb.org/3/search/movie';
-
   api: string = '?api_key=51734426cecd2440b4f4ce9658af672f';
-
   options1: string = '&language=en-US';
 
   constructor(private http: HttpClient) { }

@@ -14,6 +14,8 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './user.service';
 import { RegisterComponent } from './register/register.component';
+import { MovieFavoritesComponent } from './movie-favorites/movie-favorites.component';
+import { FavoriteService } from './favorite.service';
 
 @NgModule({
     declarations: [
@@ -22,7 +24,8 @@ import { RegisterComponent } from './register/register.component';
         HomeComponent,
         MovieSearchComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        MovieFavoritesComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -33,7 +36,7 @@ import { RegisterComponent } from './register/register.component';
         ROUTING,
         HttpClientModule
     ],
-    providers: [MovieService, UserService],
+    providers: [MovieService, UserService, FavoriteService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

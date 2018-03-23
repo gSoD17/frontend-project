@@ -11,7 +11,7 @@ export class MovieSearchComponent implements OnInit {
   constructor(private _searchMovies: MovieService) { }
 
   movies: any
-  reesults: object
+  results: object
 
   ngOnInit() {
   }
