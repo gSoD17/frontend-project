@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './user.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { UserService } from './user.service';
         AboutComponent,
         HomeComponent,
         MovieSearchComponent,
-        LoginComponent
+        LoginComponent,
+        RegisterComponent
     ],
     imports: [
         BrowserAnimationsModule,

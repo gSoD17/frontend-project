@@ -11,4 +11,8 @@ export class UserService {
   login(user) {
      return this._http.post(this.base_url + 'login',user)
   }
+  
+  register(regUser) {
+    return this._http.post(this.base_url, regUser)
+  }
 }
