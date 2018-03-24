@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   user: any = {
     email: '',
-    password: ''
+    password: '',
   }
 
   constructor(private _user: UserService, private _router: Router) { }
@@ -26,9 +26,10 @@ export class LoginComponent implements OnInit {
         userRes =>{ console.log(userRes, 'res')
         this._router.navigate(['/home'])
         // save token here
+        sessionStorage.setItem('token', userRes.token)
+        sessionStorage.setItem('userId', userRes.userId)
         }
       )
-    // this._router.navigate(['/home'])
   }
 
 }
