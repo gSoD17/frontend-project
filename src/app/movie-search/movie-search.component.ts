@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
+import { FavoriteService } from '../favorite.service';
 
 @Component({
   selector: 'app-movie-search',
@@ -8,7 +9,7 @@ import { MovieService } from '../movie.service';
 })
 export class MovieSearchComponent implements OnInit {
 
-  constructor(private _searchMovies: MovieService) { }
+  constructor(private _searchMovies: MovieService, private _favoriteMovie: FavoriteService) { }
 
   movies: any
   results: object
@@ -22,6 +23,10 @@ export class MovieSearchComponent implements OnInit {
         this.movies = movieData['results']
         console.log(movieData)
       })
+  }
+  
+  newMovie(add) {
+    this._favoriteMovie.addMovie(add)
   }
 
 }

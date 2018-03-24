@@ -23,13 +23,12 @@ export class LoginComponent implements OnInit {
     console.log(this.user)
     return this._user.login(this.user)
       .subscribe(
-        userRes => console.log(userRes, 'res')
+        userRes =>{ console.log(userRes, 'res')
+        this._router.navigate(['/home'])
+        // save token here
+        }
       )
     // this._router.navigate(['/home'])
-  }
-  
-  goNavigate() {
-    this._router.navigate(['/home'])
   }
 
 }

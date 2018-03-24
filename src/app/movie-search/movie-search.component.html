@@ -1,12 +1,36 @@
 <div>
-    <label>Search:
-        <input [(ngModel)]='movie' placeholder='search' (keyup.enter)='newSearch(movie)'>
-    </label>
+    <form>
+        <section class='form-block'>
+            <div class='form-group'>
+                <label>Search:
+                    <input type='text' id='formFields_1' size='35' [(ngModel)]='movie' placeholder='search' (keyup.enter)='newSearch(movie)' [ngModelOptions]='{standalone: true}'>
+                </label>
+            </div>
+        </section>
+    </form>
 </div>
 
 <div *ngIf='movies'>
     <ul *ngFor='let movie of movies | slice:0:19'>
-        <h1>{{movie.title}}</h1>
-        <img src='https://image.tmdb.org/t/p/w500/{{movie.poster_path}}'>
+        <div class='row'>
+            <div class='col-lg-4 col-md-12 col-sm12 col-xs-12'>
+                <div class='card clickable' (click)='newMovie(movie)'>
+                    <div class='card'>
+                        <div class='card-header'>
+                            <h1 class='card-title'>{{movie.title}}</h1>
+                        </div>
+                        <div class='card-img'>
+                            <img src='https://image.tmdb.org/t/p/w500/{{movie.poster_path}}'>
+                        </div>
+                        <div class='card-block'>
+                            <div class='title'>
+                                <h3>Overview</h3>
+                            </div>
+                            <p>{{movie.overview}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </ul>
 </div>
