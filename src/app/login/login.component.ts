@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   user: any = {
     email: '',
-    password: '',
+    password: ''
   }
 
   constructor(private _user: UserService, private _router: Router) { }
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     console.log(this.user)
     return this._user.login(this.user)
       .subscribe(
-        userRes =>{ console.log(userRes, 'res')
+        userRes =>{ console.log(userRes, 'Login Successful')
         this._router.navigate(['/home'])
         // save token here
         sessionStorage.setItem('token', userRes.token)

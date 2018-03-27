@@ -1,14 +1,5 @@
-<div>
-    <form>
-        <section class='form-block'>
-            <div class='form-group'>
-                <label>Search:
-                    <input type='text' id='formFields_1' size='35' [(ngModel)]='movie' placeholder='search' (keyup.enter)='newSearch(movie)' [ngModelOptions]='{standalone: true}'>
-                </label>
-            </div>
-        </section>
-    </form>
-</div>
+<h1>Search:</h1>
+<input type='text' id='formFields_1' size='35' [(ngModel)]='movie' placeholder='search' (keyup.enter)='newSearch(movie)' [ngModelOptions]='{standalone: true}'>
 
 <div *ngIf='movies'>
     <ul *ngFor='let movie of movies | slice:0:19'>

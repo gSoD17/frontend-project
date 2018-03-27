@@ -8,6 +8,9 @@ export class UserService {
 
   base_url: string = 'http://gino-spring-2018-phortonssf.c9users.io:8080/api/appUsers/'
   
+  // movies = this._favorite.favoriteMovies
+  
+  
   login(user) {
      return this._http.post(this.base_url + 'login',user)
   }
@@ -15,4 +18,11 @@ export class UserService {
   register(regUser) {
     return this._http.post(this.base_url, regUser)
   }
+  
+  // saveMovie(movie) {
+  //   let token = sessionStorage.getItem('token')
+  //   let userId = sessionStorage.getItem('userId')
+  //   return this._http.post(this.base_url + userId + '/movies', this.movies)
+  //   // console.log(this.movies)
+  // }
 }

@@ -26,7 +26,12 @@ export class MovieSearchComponent implements OnInit {
   }
   
   newMovie(add) {
-    this._favoriteMovie.addMovie(add)
+    delete add.id
+    console.log(add.id)
+    return this._favoriteMovie.addMovie(add)
+    .subscribe(
+      favMov => console.log(favMov, 'favMov')
+    )
   }
 
 }
