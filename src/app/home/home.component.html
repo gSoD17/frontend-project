@@ -3,3 +3,8 @@
   ~ This software is released under MIT license.
   ~ The full license information can be found in LICENSE in the root directory of this project.
   -->
+<button (click)='showFavorites()'>Show</button>  
+  
+  <ul *ngFor='let favorite of favoritedMovies'>
+    <p>{{favorite.title}}</p>
+  </ul>

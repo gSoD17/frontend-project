@@ -7,8 +7,8 @@
         </label>
         <h3>Please Login</h3>
         <input type='text' placeholder='email' [(ngModel)]='user.email' [ngModelOptions]='{standalone: true}'>
-        <input type='text' placeholder='password' [(ngModel)]='user.password' [ngModelOptions]='{standalone: true}'>
+        <input type='password' placeholder='password' [(ngModel)]='user.password' [ngModelOptions]='{standalone: true}'>
         <button class="btn btn-primary" (click)='loginSubmit()'>Submit</button>
-        <button class='btn btn-warning' [routerLink]="['/register']">Register</button>
+        <button class='btn btn-warning' [routerLink]="['/register']">Create an Account</button>
     </form>
 </div>

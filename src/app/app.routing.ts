@@ -9,17 +9,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
-import { MovieFavoritesComponent } from './movie-favorites/movie-favorites.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
   
 
 export const ROUTES: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: '', redirectTo: 'login', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'movie-search', component: MovieSearchComponent},
-    {path: 'movie-favorites', component: MovieFavoritesComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent}
 ];

@@ -9,10 +9,10 @@ export class MovieService {
   api: string = '?api_key=51734426cecd2440b4f4ce9658af672f';
   options1: string = '&language=en-US';
 
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
   
   searchMovie(query: string) {
-    return this.http.get(this.search_url + this.api + '&query=' + query)
+    return this._http.get(this.search_url + this.api + '&query=' + query)
   }
 
 }

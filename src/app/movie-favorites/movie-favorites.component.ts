@@ -9,18 +9,8 @@ import { FavoriteService } from '../favorite.service';
 export class MovieFavoritesComponent implements OnInit {
 
   constructor(private _favoriteMovies: FavoriteService) { }
-  
-  // favoriteList = this._favoriteMovies.favoriteMovies
 
   ngOnInit() {
   }
-  
-  // saveFavorites() {
-  //   console.log('Favorited')
-  //   this._user.saveMovie()
-  //   .subscribe(
-  //     favMov => console.log(favMov, 'works')
-  //   )
-  // }
 
 }
