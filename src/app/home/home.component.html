@@ -3,8 +3,27 @@
   ~ This software is released under MIT license.
   ~ The full license information can be found in LICENSE in the root directory of this project.
   -->
-<button (click)='showFavorites()'>Show</button>  
+<button class="btn btn-primary" (click)='showFavorites()'>My Favorites</button>  
   
-  <ul *ngFor='let favorite of favoritedMovies'>
-    <p>{{favorite.title}}</p>
-  </ul>
+<div *ngIf='favoritedMovies'>
+    <ul *ngFor='let favorite of favoritedMovies | slice:0:19'>
+        <div class='row'>
+            <div class='col-lg-4 col-md-12 col-sm12 col-xs-12'>
+              <div class='card'>
+                  <div class='card-header'>
+                      <h1 class='card-title'>{{favorite.title}}</h1>
+                  </div>
+                  <div class='card-img'>
+                      <img src='https://image.tmdb.org/t/p/w500/{{favorite.poster_path}}'>
+                  </div>
+                  <div class='card-block'>
+                      <div class='title'>
+                          <h3>Overview</h3>
+                      </div>
+                      <p>{{favorite.overview}}</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </ul>
+</div>
